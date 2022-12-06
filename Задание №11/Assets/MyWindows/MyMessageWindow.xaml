@@ -1,0 +1,26 @@
+﻿<Window x:Class="Задание__11.Assets.MyWindows.MyMessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Задание__11.Assets.MyWindows"
+        mc:Ignorable="d" WindowStyle="None" ResizeMode="NoResize"
+        Title="MyMessageWindow" Height="170" Width="450">
+    <Grid Style="{DynamicResource MyGrid}">
+        <TextBlock Text="220_Смирнов Алексей_ПР№11" Style="{DynamicResource MyHeader}" Height="16" Width="800" MouseDown="DragMove"/>
+        <Button Style="{DynamicResource MyExit}" Click="NoClick" Margin="0 0 0 0" VerticalContentAlignment="Center">
+            <Button.ToolTip>
+                <ToolTip Content="Закрыть" Style="{DynamicResource MyToolTip}" Width="62" />
+            </Button.ToolTip>
+        </Button>
+        <Button Style="{DynamicResource MyDeactivate}" Click="DeactivateClick"  Margin="0 0 18 0" VerticalContentAlignment="Center">
+            <Button.ToolTip>
+                <ToolTip Content="Свернуть" Style="{DynamicResource MyToolTip}" Width="62" />
+            </Button.ToolTip>
+        </Button>
+        <Image Name="MainImage" Height="100" Width="100" HorizontalAlignment="Left" Margin="20 0 0 0"/>
+        <TextBlock Name="MainText" Style="{DynamicResource MyTextBlock}" Text="text" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100 0 0 20"/>
+        <Button Name="YesButton" Click="YesClick" Height="30" Width="100" Content="Да" Style="{DynamicResource MyButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 180 20"/>
+        <Button Name="NoButton" Click="NoClick" Height="30" Width="100" Content="Нет" Style="{DynamicResource MyButton}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0 0 60 20" />
+    </Grid>
+</Window>
