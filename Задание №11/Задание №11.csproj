@@ -6,11 +6,42 @@
     <RootNamespace>Задание__11</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
-    <Folder Include="Assets\Styles\" />
+    <Compile Remove="Assets\Utilitys\**" />
+    <EmbeddedResource Remove="Assets\Utilitys\**" />
+    <None Remove="Assets\Utilitys\**" />
+    <Page Remove="Assets\Utilitys\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Images\bullet-list.png" />
+    <None Remove="Assets\Images\center-align.png" />
+    <None Remove="Assets\Images\error.png" />
+    <None Remove="Assets\Images\icon.png" />
+    <None Remove="Assets\Images\left-align.png" />
+    <None Remove="Assets\Images\left-indentation.png" />
+    <None Remove="Assets\Images\question.png" />
+    <None Remove="Assets\Images\right-align.png" />
+    <None Remove="Assets\Images\right-indentation.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="InputSimulator" Version="1.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Images\bullet-list.png" />
+    <Resource Include="Assets\Images\center-align.png" />
+    <Resource Include="Assets\Images\error.png" />
+    <Resource Include="Assets\Images\icon.png" />
+    <Resource Include="Assets\Images\left-align.png" />
+    <Resource Include="Assets\Images\left-indentation.png" />
+    <Resource Include="Assets\Images\question.png" />
+    <Resource Include="Assets\Images\right-align.png" />
+    <Resource Include="Assets\Images\right-indentation.png" />
   </ItemGroup>
 
 </Project>

@@ -3,19 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Задание__11.Assets.MyWindows" mc:Ignorable="d" SizeToContent="WidthAndHeight"
-        Title="Сохранить файл" Height="150" Width="310" ResizeMode="NoResize">
-    <Grid>
-        <TextBlock Text="Файл: " Width="35" Height="20" Margin="10,30,265,84" />
-        <TextBox Name="FileNameBox" Width="170" Height="20" Margin="50,30,90,84" />
-        <Button Content="Выбрать" Width="60" Height="20" Margin="225,30,25,84" Click="ClickForSelectFile"/>
-        <TextBlock Text="Кодировка: " Width="70" Height="20" Margin="10,55,230,59" />
-        <Menu Width="200" Height="20" Margin="85,55,25,59">
-            <MenuItem Name="MainHeader" Header="Кодировка">
-                <MenuItem Header="Windows-1251" Click="Windows1251Click" />
-                <MenuItem Header="Unicode" Click="UnicodeClick" />
-            </MenuItem>
-        </Menu>
-        <Button Content="Сохранить" Height="20" Width="100" Click="SelectedClick"  Margin="185,80,25,34" />
+        xmlns:local="clr-namespace:Задание__11.Assets.MyWindows" mc:Ignorable="d"
+        Height="100" Width="370" Title="Сохранить файл" ResizeMode="NoResize" 
+        WindowStyle="None" Icon="\Assets\Images\icon.png">
+    <Grid Name="MainGrid" Style="{DynamicResource MyGrid}">
+        <TextBlock Text="220_Смирнов Алексей_ПР№11" Style="{DynamicResource MyHeader}" MouseDown="DragMove" Height="16" Width="800" />
+        <Button Style="{DynamicResource MyExit}" Click="SelectedClick"  Margin="0 0 0 0" VerticalContentAlignment="Center">
+            <Button.ToolTip>
+                <ToolTip Content="Закрыть" Style="{DynamicResource MyToolTip}" Width="62" />
+            </Button.ToolTip>
+        </Button>
+        <Button Style="{DynamicResource MyDeactivate}" Click="DeactivateClick" Margin="0 0 18 0" VerticalContentAlignment="Center">
+            <Button.ToolTip>
+                <ToolTip Content="Свернуть" Style="{DynamicResource MyToolTip}" Width="62" />
+            </Button.ToolTip>
+        </Button>
+        <TextBlock Text="Файл: " Width="45" Height="30" Margin="35,30,0,0" Style="{DynamicResource MyTextBlock}" FontSize="16" />
+        <TextBox Name="FileNameBox" Width="170" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Padding="5 0 0 0" Margin="85,27,0,0" FontSize="16" VerticalContentAlignment="Center" Style="{DynamicResource MyTextBox}">
+            <TextBox.ToolTip>
+                <ToolTip Content="Имя файла" Style="{DynamicResource MyToolTip}" Width="75" />
+            </TextBox.ToolTip>
+        </TextBox>
+        <Button Content="Выбрать" Width="80" Height="30" Margin="260,27,0,0" Click="ClickForSelectFile"  Style="{DynamicResource MyButton}">
+            <Button.ToolTip>
+                <ToolTip Content="Выбрать через проводник" Style="{DynamicResource MyToolTip}" Width="160" />
+            </Button.ToolTip>
+        </Button>
+        <Button Name="SelectedButton" Content="Сохранить" Height="30" Width="100" Click="SelectedClick"  Margin="240,62,0,0" IsEnabled="True" Style="{DynamicResource MyButton}">
+            <Button.ToolTip>
+                <ToolTip Content="Сохранить файл" Style="{DynamicResource MyToolTip}" Width="95" />
+            </Button.ToolTip>
+        </Button>
     </Grid>
 </Window>
